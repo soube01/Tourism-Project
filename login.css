@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* h1{
+    font-size: 4.8rem;
+} */
+/* h2{
+    font-size: 2rem;
+}
+p{
+    font-size:1.2rem;
+    letter-spacing: 0.08;
+
+} */
+button,input[type="submit"]{
+    border: .1rem;
+    outline: none;
+    padding: .6rem 1.2rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.05rem;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    
+}
+/* registeration page styling */
+.registration-header{
+    height: 100vh;
+    /* background-image: url(/Jharkhand/jonha.jpg); */
+    background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(login.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.container{
+    height: 10vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+
+}
+.logo a{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    /* font-style: italic; */
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 1.3rem;
+    font-weight: 600;
+    
+}
+ul li i{
+    font-style: normal;
+}
+li>a{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+/* home page styling */
+/* registration page styling */
+main{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration{
+    /* min-height: 10rem;
+    min-width: 20vw; */
+    background-color: aquamarine;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.7s;
+    z-index: 3;
+}
+
+.grid-two--column{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.form-text{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(login.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 3rem 2rem;
+}
+.form-text p{
+    width: 30ch;
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+}
+.form-text button{
+    background-color: #fff;
+    color: #000;
+    /* border-radius: 10px; */
+
+}
+.form-text button:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+.registration-form,.login-form{
+    width: 100%;
+    min-height: 25vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.registration-form p,.login-form p{
+    margin: 1rem 0 1.7rem 0;
+}
+.social-icons{
+    display: flex;
+    gap: 1.4rem;
+    margin: 1rem 0 .6rem 0;
+
+}
+
+.fa-brands,.fab{
+    width:2.2rem;
+    height: 2.2rem;
+    border: 0.1rem solid grey;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 15rem;
+    margin: 0.3rem 0;
+    border:none;
+    background-color: #e8e8e8;
+    padding: 0.6rem 0.8rem;
+    letter-spacing: 0.07;
+}
+
+input[type="submit"]{
+    /* margin-top: 1rem; */
+    min-width: 10rem;
+    background-color: rgb(68, 68, 241);
+    color: #fff;   
+}
+
+.registration:not(.login-section--display){
+    display: none;
+}
+
+.login-section--display .registration{
+    display: block;
+}
+
+.login-section--display .login{
+    display: none;
+}
+
+.registration-form span{
+    color: red;
+    background-color: transparent ;
+    position: sticky;
+    margin-left: 90%;
+    
+    /* width: 8%; */
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: bold;
+    font-weight: bold;
+}
+.registration-form span:hover{
+    background-color: rgb(240, 250, 215);
+    width: 8%;
+}
+.login-form span{
+    color: red;
+    background-color: transparent ;
+    position: sticky;
+    margin-left: 90%;
+    
+    /* width: 8%; */
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: bold;
+    font-weight: bold;
+}
+
+.login-form span:hover{
+    background-color: rgb(240, 250, 215);
+    width: 8%;
+}
+
+.show-form{
+    top:50%;
+    /* z-index: 3; */
+}
+
+@media screen  and (max-width: 768px) {
+    
+     .grid-two--column{
+        grid-template-columns: 1fr;
+     }
+    
+
+    .registration-header .container, .home-header .container{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .registration-header .container, .home-header .container .logo{
+        margin-top: 1rem;
+    }
+    .registration, .login{
+        min-width: 90vw;
+    }
+    .form-text{
+        order: 1;
+    }
+    .registration, .login{
+        order: 0;
+    }
+    .form-text p{
+        width: 25ch;
+    }
+   
+}
